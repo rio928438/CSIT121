@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Casita Sedona</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+		/* Mobile First Design */
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Verdana, Arial, sans-serif;
+			margin: 0;
+		}
+
+		header {
+			background-image: url(header.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+
+		/* Name the Grid Areas */
+		header {
+			grid-area: header;
+		}
+
+		nav {
+			grid-area: navigation;
+		}
+
+		main {
+			grid-area: main;
+		}
+
+		aside {
+			grid-area: sidebar;
+		}
+
+		footer {
+			grid-area: footer;
+		}
+
+		#wrapper {
+			background-color: #F7F1E3;
+			color: #0B8781;
+			display: grid;
+			grid-template:
+				"header "
+				"navigation "
+				"main"
+				"footer";
+		}
+
+		h1 {
+			text-align: center;
+			color: #F7F1E3;
+			font-size: 300%;
+			text-shadow: 10px 10px 10px #000000;
+		}
+
+		h2 {
+			color: #2c2c54;
+		}
+
+		nav ul {
+			padding-left: 0;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+		nav ul {
+			list-style-type: none;
+		}
+
+		nav li {
+			width: 20%;
+			min-width: 6em;
+			font-size: 110%;
+			text-align: center;
+			background-color: #003C58;
+			margin: .5em;
+			padding: .5em;
+		}
+
+		nav a {
+			text-decoration: none;
+		}
+
+		nav a:link {
+			color: #F7F1E3;
+		}
+
+		nav a:visited {
+			color: #B9EDF0;
+		}
+
+		nav a:hover {
+			color: #FFFFFF;
+		}
+
+		aside {
+			display: none;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		main {
+			padding: 0 1em 1em;
+		}
+
+		footer {
+			text-align: center;
+			font-style: italic;
+			padding: 1em;
+		}
+		/* For screens 38em and up (608px) Tablets / Smaller Laptops */
+		@media (min-width: 38em) {
+			#wrapper {
+				grid-template:
+					" header   header "
+					" navigation   navigation "
+					" main   sidebar "
+					" footer   footer "
+					/ 70% 30%;
+			}
+
+			aside {
+				display: block;
+				padding: 1em;
+			}
+		}
+       /* For screen 65 em and up (1040px) Large laptops and desktops */
+		@media (min-width: 65em) {
+			nav ul {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+			}
+
+			#wrapper {
+				grid-template:
+					" header   header   header"
+					" navigation   main   sidebar"
+					" footer   footer   footer"
+					/ 150px 1fr 30%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Desert Bed &amp; Breakfast</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="rooms.html">Rooms</a></li>
+				<li><a href="specials.html">Specials</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2>Located in the Heart of the Desert</h2>
+			<p>At Desert Bed &amp; Breakfast you&rsquo;ll be close to art galleries, shops, restaurants, hiking trails,
+				and tours. Ride the free trolley to shops and galleries.</p>
+			<h2>Luxurious Rooms </h2>
+			<p>Stay in a well-appointed room at Desert B&B with your own fireplace, king-size bed, balcony overlooking
+				the red rocks, private bath with shower, and whirlpool tub for two. Each vista is unique and sure to be
+				a high point of your vacation experience.</p>
+			<h2>Hearty Breakfast</h2>
+			<p>Each day begins with a hearty breakfast that includes your choice of belgian waffles, pumpkin french
+				toast, or quiche. Fresh fruit, yogurt, juice, and coffee are always available.</p>
+			<h2>About Your Hosts</h2>
+			<p>Your hosts are long-time Desert residents who love to share their knowledge of the Desert area with their
+				guests. </p>
+		</main>
+		<aside>
+			<img src="pools.jpg" alt="Pools of water in the rock">
+			<h2>Guided Hikes</h2>
+			<p>We offer a guided hike each week for guests. Explore the areas along our famous trails.</p>
+		</aside>
+		<footer>Copyright &copy; 2024
+		</footer>
+	</div>
+</body>
+
+</html>
