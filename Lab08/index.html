@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</head>
+
+<body>
+
+   
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="index1.html">Page 1</a>
+        <a href="index2.html">Page 2</a>
+        <a href="index3.html">Page 3</a>
+    </div>
+
+    
+    <span id="openBTN"  onclick="openNav()">&#9776; open</span>
+
+    
+    <div id="main">
+        <header>
+            <h1>Images I Like</h1>
+            <img class="img-table" src="images/MT2.jpg" alt="MosaicTable">
+        </header>
+        <div id="para">
+            <p>This is my main site , here by clicking the top left open button you can navigate to the other webpages
+                I've created.</p>
+            <p> The background image is a darkened picture of one of my late Grandfather's Paintings. Enjoy!</p>
+
+        </div>
+    </div>
+
+    
+    <footer>
+        <p>Copyright Rios928438. All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
