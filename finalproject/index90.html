@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 9</title>
+
+    <!-- CSS -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eae4ea
+        }
+
+        th {
+            background-color: #7c0f65;
+            color: white;
+        }
+
+        .button {
+            
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            border: 4px solid rgb(55, 12, 211);
+            background: rgba(212, 13, 206, 0.5);
+            color: rgb(246, 237, 239);
+            outline: none;
+            border-radius: 30px;
+            font-size: 30px;
+            width: 500px;
+           
+
+        }
+
+        .button:hover {
+            color: black;
+            background: white;
+        }
+        a {color:rgb(12, 127, 161); font-size: 30px; text-align: center;}
+        @media (min-width: 38em) {
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+        }
+
+        #wrapper {
+            grid-template:
+                " header   header "
+                " navigation   navigation "
+                " main   main "
+                " footer   footer "
+                / 70% 30%;
+        }
+
+
+    }
+
+    
+    @media (min-width: 65em) {
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+    </style>
+
+    <!--JavaScript-->
+    <script>
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+
+               
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+
+           
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table =
+                `<tr><th>Firstname</th><th>Lastname</th>
+                    <th>Title</th><th>Division</th>
+                    <th>Building</th><th>Room</th>
+                </tr>`;
+            let x = xmlDoc.getElementsByTagName("employee");
+
+            
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("firstname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("lastname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("title")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("division")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("building")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("room")[0]
+                        .childNodes[0].nodeValue + "</td></tr>";
+            }
+
+       
+            document.getElementById("id").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    
+        <button type="button" class="button" onclick="loadXMLDoc()">
+            Get Employees Details
+        </button>
+    
+
+    <br><br>
+    <table id="id"></table>
+    <div class="link-container">
+        <a href="indexfinal.html">Final Home</a>
+        <a href="index5.html">Lab 5</a> 
+        <a href="index6.html">Lab 6</a> 
+        <a href="indexcontact7.html">Lab 7.0</a>
+        <a href="indextierlist7.html">Lab 7.1</a> 
+        <a href="index80.html">Lab 8.0</a> 
+        <a href="index81.html">Lab 8.1</a>
+        <a href="index82.html">Lab 8.2</a> 
+        <a href="index83.html">Lab 8.3</a> 
+        <a href="index90.html">Lab 9</a>
+        <a href="index100.html">Lab 10.0</a>
+        <a href="index101.html">Lab 10.1</a> 
+        <a href="index102.html">Lab 10.2</a> 
+        <a href="index103.html">Lab 10.3</a>
+        
+    </div>
+</body>
+
+</html>
