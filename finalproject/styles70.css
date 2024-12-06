@@ -1,0 +1,93 @@
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th{ 
+    padding: 3%; width: 200px;
+    width: 120px;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+     
+}
+td img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+body{ background-color: rgb(116, 96, 116);}
+
+.row1{background-color: bisque;}
+.row2{background-color: rgb(245, 51, 167);}
+.row3{background-color: rgb(237, 22, 22);}
+.row4{background-color: rgb(238, 212, 8);}
+.row5{background-color: rgb(196, 247, 255);}
+.row6{background-color: rgb(209, 255, 196);}
+
+table{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+.link-container{
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+.link-container a {
+    text-decoration: none;
+    color: #f3f4fd;
+    font-size: 24px;
+}
+caption{
+    font-size: 24px;
+}
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    background-color: aqua;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+select, textarea, input[type="sumbit"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+@media (min-width: 38em) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+    #wrapper {
+        grid-template:
+            " header   header "
+            " navigation   navigation "
+            " main   main "
+            " footer   footer "
+            / 70% 30%;
+    }
+
+
+}
+
+
+@media (min-width: 65em) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
